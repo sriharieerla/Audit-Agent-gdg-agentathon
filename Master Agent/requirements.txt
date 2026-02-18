@@ -1,0 +1,7 @@
+crewai
+python-dotenv
+google-genai
+pydantic
+pdfplumber
+pandas
+reportlab

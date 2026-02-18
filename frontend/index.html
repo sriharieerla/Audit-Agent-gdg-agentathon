@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AuditAgent – AI that audits, not just reads</title>
+
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="prism-bg"></div>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <nav class="glass-nav">
+        <div class="brand">
+            Audit<span>Agent</span>
+        </div>
+
+        <div class="tagline">
+            AI that audits,<br/>not just reads
+        </div>
+
+        <div class="nav-icons">
+            <i data-lucide="layout-dashboard" class="active" title="Dashboard"></i>
+            <i data-lucide="file-search" title="Audit Engine"></i>
+            <i data-lucide="shield-alert" title="Risk Intelligence"></i>
+            <i data-lucide="bar-chart-3" title="Analytics"></i>
+            <i data-lucide="settings" title="System Config"></i>
+        </div>
+
+        <div class="profile-dot"></div>
+    </nav>
+
+    <!-- MAIN VIEW -->
+    <main class="main-view">
+
+        <!-- HEADER -->
+        <header class="view-header">
+            <div>
+                <h1>Audit Intelligence Dashboard</h1>
+                <p>End-to-end AI-powered forensic auditing system</p>
+            </div>
+
+            <div class="header-data">
+                <div class="h-stat">
+                    <span>MODEL STATUS</span>
+                    <strong>ACTIVE</strong>
+                </div>
+                <div class="h-stat">
+                    <span>AUDITS RUN</span>
+                    <strong>1,248</strong>
+                </div>
+                <div class="h-stat">
+                    <span>DETECTION RATE</span>
+                    <strong>98.6%</strong>
+                </div>
+            </div>
+        </header>
+
+        <!-- KPI CARDS -->
+        <section class="kpi-grid">
+            <div class="glass-card kpi">
+                <h4>Total Documents</h4>
+                <strong>312</strong>
+                <p>PDFs processed this month</p>
+            </div>
+
+            <div class="glass-card kpi">
+                <h4>Fraud Signals</h4>
+                <strong class="danger">27</strong>
+                <p>Critical inconsistencies detected</p>
+            </div>
+
+            <div class="glass-card kpi">
+                <h4>Clean Reports</h4>
+                <strong class="safe">285</strong>
+                <p>No violations found</p>
+            </div>
+
+            <div class="glass-card kpi">
+                <h4>Avg Audit Time</h4>
+                <strong>3.4s</strong>
+                <p>Per document analysis</p>
+            </div>
+        </section>
+
+        <!-- CHARTS -->
+        <section class="data-grid">
+            <div class="glass-card chart-main">
+                <h3>Risk Distribution Analysis</h3>
+                <canvas id="riskPieChart"></canvas>
+            </div>
+
+            <div class="glass-card chart-secondary">
+                <h3>Anomaly Trend (Last 24 Hours)</h3>
+                <canvas id="trendLineChart"></canvas>
+            </div>
+        </section>
+
+        <!-- AUDIT WORKSPACE -->
+        <section class="workspace">
+
+            <!-- UPLOAD -->
+            <div class="glass-card upload-zone" id="dropZone">
+                <div class="glass-icon">
+                    <i data-lucide="layers"></i>
+                </div>
+
+                <h3>Document Ingestion</h3>
+                <p>
+                    Upload government PDFs, invoices, payrolls or sanction orders.
+                    AuditAgent performs arithmetic validation, GST verification,
+                    duplication detection and logical cross-checks.
+                </p>
+
+                <input type="file" id="pdfInput" hidden />
+                <span id="fileInfo">No file connected</span>
+
+                <button class="prism-btn" id="auditBtn">
+                    RUN AI AUDIT
+                </button>
+            </div>
+
+            <!-- LOGS -->
+            <div class="glass-card logs">
+                <div class="log-header">LIVE AUDIT STREAM</div>
+                <div id="terminal" class="terminal-view">
+                    <p>> System initialized…</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="glass-card explanation">
+            <h3>How AuditAgent Works</h3>
+            <ul>
+                <li>📄 Extracts structured & unstructured data from PDFs</li>
+                <li>🧮 Recalculates totals using deterministic financial rules</li>
+                <li>🔍 Detects mismatches, duplications & policy violations</li>
+                <li>🧠 Uses LLM reasoning for semantic & context validation</li>
+                <li>📊 Generates auditor-ready visual and PDF reports</li>
+            </ul>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>
+                AuditAgent © 2025 · Built for Government-grade Financial Audits ·
+                <strong>AI that audits, not just reads</strong>
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
